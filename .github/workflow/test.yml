@@ -1,0 +1,24 @@
+name: Simple cicd
+
+on:
+  push:
+    branches:
+      - main
+        feature/login
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu:latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: test
+        run:
+          echo "Hello from github actions"
+          echo "cicd pipeline is working"
+
+      - name: build docker image
+        run: docker build -t nginx .
