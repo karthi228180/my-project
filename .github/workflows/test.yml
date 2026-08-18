@@ -1,12 +1,9 @@
 name: Simple cicd
-
 on:
   push:
     branches:
       - main
       - feature/login
-
-
 jobs:
   test:
     runs-on: ubuntu:latest
