@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - feature/login
-  pull_request:
+
 
 jobs:
   test:
